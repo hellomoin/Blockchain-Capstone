@@ -30,10 +30,9 @@ contract SolnSquareVerifier is MSDRealEstateERC721Token, Verifier{
     // TODO define a mapping to store unique solutions submitted
     mapping(bytes32 => Solution) public solutionSubmitted;
 
-/*
-    constructor(address verifierAddress) MSDRealEstateERC721Token() public{
-        verifier = SquareVerifier(verifierAddress);
-    }*/
+    constructor() MSDRealEstateERC721Token() public{
+        //verifier = SquareVerifier(verifierAddress);
+    }
 
     // TODO Create an event to emit when a solution is added
     event Added(uint index, address sender);
