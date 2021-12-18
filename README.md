@@ -15,6 +15,7 @@ Ensure you have a local blockchain running e.g. Ganache. Execute the tests:
 # Contract Addresses on Rinkeby
 
 SquareVerifier:  `0x3c94C55aa5081d59A4D5989bD5941e578c95f4a4`
+
 SolnSquareVerifier: `0xf7ABF0c936E3A7F58d6F36c9199b615060F7Ce58`
 
 # OpenSea Marketplace Storefront
