@@ -18,14 +18,9 @@
  *
  */
 
-// const HDWalletProvider = require('truffle-hdwallet-provider');
-// const infuraKey = "fj4jll3k.....";
+const HDWalletProvider = require('truffle-hdwallet-provider');
+const infuraKey = "xxxxxxxxxxxxxxxxxxxxxxxxxx"; 
 //
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
-const HDWalletProvider = require('@truffle/hdwallet-provider');
-const infuraKey = "5e9d154a4dbb4c26afecded61e76bf1e";
-
 const fs = require('fs');
 const mnemonic = fs.readFileSync("./.secret").toString().trim();
 
@@ -47,17 +42,18 @@ module.exports = {
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
     //
-     development: {
+    development: {
       host: "127.0.0.1",     // Localhost (default: none)
       port: 7545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
-     },
-     rinkeby: {
-      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
-        network_id: 4,       // rinkeby's id
-        gas: 6000000,
-        gasPrice: 10000000000
     },
+
+    rinkeby: {
+      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
+      network_id: 4,       // Rinkeby's id
+      gas: 5500000,        // Rinkeby has a lower block limit than mainnet
+    },
+
     // Another network with more advanced options...
     // advanced: {
       // port: 8777,             // Custom port
@@ -95,6 +91,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
+      version: "0.5.2"
       // version: "0.5.1",    // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion

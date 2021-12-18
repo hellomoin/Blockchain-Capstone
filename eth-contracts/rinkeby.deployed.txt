@@ -1,0 +1,168 @@
+PS C:\Users\msd\udacity\Blockchain-Capstone\eth-contracts> truffle deploy --network rinkeby --reset
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\ERC721Mintable.sol
+> Compiling .\contracts\Migrations.sol
+> Compiling .\contracts\Oraclize.sol
+> Compiling .\contracts\SolnSquareVerifier.sol
+> Compiling .\contracts\SquareVerifier.sol
+> Compiling .\..\..\examples\real-estate-marketplace-main\eth-contracts\contracts\ERC721Mintable.sol
+> Compiling .\..\..\examples\real-estate-marketplace-main\eth-contracts\contracts\Oraclize.sol
+> Compiling openzeppelin-solidity\contracts\drafts\Counters.sol
+> Compiling openzeppelin-solidity\contracts\math\SafeMath.sol
+> Compiling openzeppelin-solidity\contracts\token\ERC721\IERC721Receiver.sol
+> Compiling openzeppelin-solidity\contracts\utils\Address.sol
+> Compilation warnings encountered:
+
+    project:/contracts/Oraclize.sol:371:5: Warning: Function state mutability can be restricted to pure
+    function __callback(bytes32 _myid, string memory _result, bytes memory _proof) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+,project:/contracts/SquareVerifier.sol:449:5: Warning: Function state mutability can be restricted to view
+    function addition(G2Point memory p1, G2Point memory p2) internal returns (G2Point memory r) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+> Artifacts written to C:\Users\msd\udacity\Blockchain-Capstone\eth-contracts\build\contracts
+> Compiled successfully using:
+   - solc: 0.5.2+commit.1df8f40c.Emscripten.clang
+
+
+
+Migrations dry-run (simulation)  
+===============================  
+> Network name:    'rinkeby-fork'
+> Network id:      4
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > block number:        9838079
+   > block timestamp:     1639865915
+   > account:             0x8c4cc332b0161d8D99f1Cf5fe9f0Eed3Fd4A1Dd9
+   > balance:             1.049108393106162735
+   > gas used:            219958 (0x35b36)
+   > gas price:           2 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000439916 ETH
+
+   -------------------------------------
+   > Total cost:         0.000439916 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Replacing 'SquareVerifier'
+   --------------------------
+   > block number:        9838081
+   > block timestamp:     1639865923
+   > account:             0x8c4cc332b0161d8D99f1Cf5fe9f0Eed3Fd4A1Dd9
+   > balance:             1.046979809106162735
+   > gas used:            1036924 (0xfd27c)
+   > gas price:           2 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002073848 ETH
+
+
+   Replacing 'SolnSquareVerifier'
+   ------------------------------
+   > block number:        9838082
+   > block timestamp:     1639865948
+   > account:             0x8c4cc332b0161d8D99f1Cf5fe9f0Eed3Fd4A1Dd9
+   > balance:             1.039284055106162735
+   > gas used:            3847877 (0x3ab6c5)
+   > gas price:           2 gwei
+   > value sent:          0 ETH
+   > total cost:          0.007695754 ETH
+
+   -------------------------------------
+   > Total cost:         0.009769602 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.010209518 ETH
+
+
+
+
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 29999943 (0x1c9c347)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x3b249a4a4e518eeb93d486d2ad88063bd268f4733f25503e5e73aa60a7e1bea7
+   > Blocks: 2            Seconds: 16
+   > contract address:    0x61d5f32F4EA7fb6113c49b9d81Aff5D519afDE3C
+   > block number:        9838083
+   > block timestamp:     1639865981
+   > account:             0x8c4cc332b0161d8D99f1Cf5fe9f0Eed3Fd4A1Dd9
+   > balance:             1.049193922104272671
+   > gas used:            236258 (0x39ae2)
+   > gas price:           1.500000008 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000354387001890064 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.000354387001890064 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Replacing 'SquareVerifier'
+   --------------------------
+   > transaction hash:    0x84c02e97f818bc626774d1547c93eaf9f4931aefa25b277b651de90f069d8f05
+   > Blocks: 0            Seconds: 8
+   > contract address:    0x3c94C55aa5081d59A4D5989bD5941e578c95f4a4
+   > block number:        9838085
+   > block timestamp:     1639866011
+   > account:             0x8c4cc332b0161d8D99f1Cf5fe9f0Eed3Fd4A1Dd9
+   > balance:             1.047569884095611135
+   > gas used:            1036924 (0xfd27c)
+   > gas price:           1.500000008 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001555386008295392 ETH
+
+
+   Replacing 'SolnSquareVerifier'
+   ------------------------------
+   > transaction hash:    0xc08245054f972d44e92b84bddeb944154e230506efc6f34afda52c5384724e36
+   > Blocks: 1            Seconds: 12
+   > contract address:    0xf7ABF0c936E3A7F58d6F36c9199b615060F7Ce58
+   > block number:        9838086
+   > block timestamp:     1639866026
+   > account:             0x8c4cc332b0161d8D99f1Cf5fe9f0Eed3Fd4A1Dd9
+   > balance:             1.041553268563522519
+   > gas used:            4011077 (0x3d3445)
+   > gas price:           1.500000008 gwei
+   > value sent:          0 ETH
+   > total cost:          0.006016615532088616 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.007572001540384008 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.007926388542274072 ETH
